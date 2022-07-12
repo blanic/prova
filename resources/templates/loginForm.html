@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/base.html :: headerfiles(title=#{pageTitle.nome})">
+<meta charset="UTF-8">
+<link th:href = "@{/css/bootstrap.min.css}" rel="stylesheet">
+<link th:href = "@{/css/mycss.css}" rel="stylesheet">
+<link rel="stylesheet" href="/css/my-style.css">
+<style>
+body {font-family: "Times New Roman", Georgia, Serif;}
+</style>
+</head>
+
+<body>
+
+<header th:replace="fragments/base.html :: menu"></header>
+
+
+
+
+    <div class="myform" id="formLoginAdmin">
+    <div class="formText">
+      <h1 class="titoloForm">Effettua il login</h1>
+     <div class=corpoForm>
+     <form th:action="@{/login}" method="POST">
+		<div>
+			<div>
+				<span>Username:</span>
+				<span><input name="username" type="text" required /></span>
+			</div>		
+			<div>
+				<span>Password:</span>
+				<span><input name="password" type="password" required /></span>
+			</div>
+			<div>
+				<span><button class="newButton"type="submit">Login</button></span>
+			</div>
+		</div>
+	</form>
+	<form th:action="@{/toRegister}" method="GET">
+                  <div>
+                    <p>Non hai un account?</p>
+                    <button class="newButton" type="submit">Iscriviti</button>
+                  </div>
+                  </form>
+    </div>
+    </div>
+    <div class="immagineBuffet">
+      <img src="/images/iNostribuffet.jpg" class="img" height="90%">
+    </div>
+  </div>
+    <footer th:replace="fragments/base.html :: footer"></footer>
+</body>
+</html>
+
+
+
+

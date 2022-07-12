@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="headerfiles(title)">
+	<meta charset="UTF-8" />
+	<link th:href="@{/css/my-style.css}" rel="stylesheet">
+	<title>Book Club</title>
+</head>
+
+<body>
+
+	<header th:fragment="menu">
+		<div class="menu">
+  <a th:href="@{/}">Book Club</a>
+  <a th:href="@{/incontri}">I prossimi incontri</a>
+  <a th:href="@{/about}">L'associazione'</a>
+  <a th:href="@{/login}">login</a>
+  <a th:href="@{/register}">Iscriviti</a>
+</div>
+	</header>
+	
+	<header th:fragment="menuUser">
+		<div class="menuUser">
+  <a th:href="@{/default}">Book Club</a>
+  <a th:href="@{/user/incontri}">I prossimi incontri</a>
+  <a th:href="@{/user/libri}">I libri</a>
+  <a th:href="@{/user/profile}">Il tuo profilo</a>
+  <a th:href="@{/user/logout}">logout</a>
+</div>
+	</header>
+	
+	<header th:fragment="menuAdmin">
+		<div class="menuAdmin">
+  <a th:href="@{/default}">Book Club</a>
+  <a th:href="@{/admin/incontri}">Gli incontri</a>
+  <a th:href="@{/admin/libri}">I libri</a>
+  <a th:href="@{/admin/autori}">Gli autori</a>
+  <a th:href="@{/admin/utenti}">Gli utenti</a>
+  <a th:href="@{/admin/register}">Registra un nuovo amministratore</a>
+  <a th:href="@{/logout}">logout</a>
+</div>
+	</header>
+
+	
+	
+	<footer th:fragment="footer">
+		<div class="Footer">
+  <span> Progetto di sistemi informativi su web</span>
+</div>
+	</footer>
+	</body>
+</html>
+	
+</body>
+</html>

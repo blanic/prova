@@ -1,0 +1,307 @@
+
+
+<!DOCTYPE html>
+<html>
+<head th:replace="fragments/base.html :: headerfiles(title=#{pageTitle.name})">
+<title>Book Club Homepage</title>
+<meta charset="ISO-8859-1">
+<link th:href = "@{/css/bootstrap.min.css}" rel="stylesheet">
+<link th:href = "@{/css/mycss.css}" rel="stylesheet">
+<link rel="stylesheet" href="/css/my-style.css">
+<style>
+body {font-family: "Times New Roman", Georgia, Serif;}
+</style>
+</head>
+
+<body>
+
+<header th:replace="fragments/base.html :: menu"></header>
+
+    <div class="myform" id="formLoginAdmin">
+    <div class="formText">
+      <h1 class="titoloForm">Effettua l'accesso</h1>
+     <div class=corpoForm>
+     <form th:action="@{/login}" method="POST">
+		<div>
+			<div>
+				<span>Username:</span>
+				<span><input name="username" type="text" required /></span>
+			</div>		
+			<div>
+				<span>Password:</span>
+				<span><input name="password" type="password" required /></span>
+			</div>
+			<div>
+				<span> <button class="btn btn-primay btn-block fa-lg gradient-custom-2 mb-3" type="submit">Log
+                      in</button></span>
+			</div>
+		</div>
+	</form>
+	<form th:action="@{/toRegister}" method="GET">
+                  <div class="d-flex align-items-center justify-content-center pb-4">
+                    <p class="mb-0 me-2">Non hai un account?</p>
+                    <button type="submit" class="btn btn-outline-danger">Crea un account</button>
+                  </div>
+                  </form>
+    </div>
+    </div>
+    <div class="immagineBuffet">
+      <img src="/iNostribuffet.jpg" class="img" height="90%">
+    </div>
+  </div>
+    <footer th:replace="fragments/base.html :: footer"></footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+profilesection class="h-100 h-custom">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-lg-8 col-xl-6">
+        <div class="card rounded-3">
+          <img src="/images/bannerBookClub.webp"
+            class="w-100" style="border-top-left-radius: .3rem; border-top-right-radius: .3rem;"
+            alt="Sample photo">
+          <div class="card-body p-4 p-md-5">
+            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Gli autori:</h3>
+            
+<ul class="list-group">
+<div th:each="autore : ${autori}"> 
+  <li class="list-group-item"> <a href="admin/autore/autore.html" th:href="@{'/admin/autore'+'/'+${autore.id}}"
+        th:text="${autore.nome}+' '+${autore.cognome}">Nome e cognome autore</a> </li>
+
+
+  </div>s
+  </ul>
+  
+  <form th:action="@{/admin/autoreForm}" method="GET">
+                  <div class="d-flex align-items-center justify-content-center pb-4">
+                    <p class="mb-0 me-2">L'autore non è presente?</p>
+                    <button type="submit" class="btn btn-success btn-lg mb-1">Aggiungi un autore</button>
+                  </div>
+                  </form>
+
+ 
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+public List<Buffet> findAll() {
+		List<Buffet> listaBuffet = new ArrayList<Buffet>();
+		for (Buffet buffet : buffetRepository.findAll()) {
+			listaBuffet.add(buffet);
+		}
+		listaBuffet.sort(new comparatoreDiBuffetPerNome());
+
+		return listaBuffet;
+	}
+
+
+<div class="form" id="formLoginAdmin">
+    <div class="formText">
+      <h1 class="titoloForm">Accedi all'area riservata</h1>
+     <div class=corpoForm>
+     <form th:action="@{/login}" method="POST">
+		<div>
+			<div>
+				<span>Username:</span>
+				<span><input name="username" type="text" required /></span>
+			</div>		
+			<div>
+				<span>Password:</span>
+				<span><input name="password" type="password" required /></span>
+			</div>
+			<div>
+				<span><button type="submit">Login</button></span>
+			</div>
+		</div>
+	</form>
+      <h3>Or login with:</h3>
+<p th:each="url : ${urls}">
+    <a th:text="${url.key}" th:href="${url.value}">Client</a>
+</p>
+    </div>
+    </div>
+    <div class="immagineBuffet">
+      <img src="/iNostribuffet.jpg" class="img" height="90%">
+    </div>
+  </div>
+    <footer th:replace="fragments/base.html :: footer"></footer>
+</body>
+</html>
+<form th:action="@{/admin/buffetForm}" method="POST">
+				<span><button class="addButton" type="Inserisci un nuovo buffet">Inserisci un nuovo buffet</button></span>
+	</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<div id="mainNavigation">
+  <nav role="navigation">
+    <div class="py-3 text-center border-bottom">
+      <img src="/BookClubLogo.jpg" alt="logo" class="invert">
+    </div>
+  </nav>
+  <div class="navbar-expand-md">
+    <div class="navbar-dark text-center my-2">
+      <button class="navbar-toggler w-75" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span> <span class="align-middle">Menu</span>
+      </button>
+    </div>
+    <div class="text-center mt-3 collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav mx-auto ">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Book Hotel</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Destinations</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Policy</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Company
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="#">Blog</a></li>
+            <li><a class="dropdown-item" href="#">About Us</a></li>
+            <li><a class="dropdown-item" href="#">Contact us</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="card-deck">
+<div th:each="incontro : ${listaTopIncontri}"> 
+  <div class="card">
+    <img src="${incontro.immagine}" class="card-img-top" alt="immagine incontro">
+    <div class="card-body">
+      <h5 class="card-title" th:text="${incontro.nome}">Nome Incontro</h5>
+      <p class="card-text" th:text="${incontro.nome}">Descrizione dell'incontro'</p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted" th:text="${incontro.libro.titolo}">Libro</small>
+      <small class="text-muted" th:text="${incontro.data}">Data</small>
+      <small class="text-muted" th:text="${incontro.ora}">Ora</small>
+    </div>
+  </div>
+</div>
+
+
+
+
+<header th:replace="fragments/base.html :: menu"></header>
+
+<header th:fragment="menu">
+		<div class="menu">
+  <a th:href="@{/}">Book Club</a>
+  <a th:href="@{/incontri}">I prossivi incontri</a>
+  <a th:href="@{/about}">L'associazione'</a>
+  <a th:href="@{/login}">Accedi</a>
+  <a th:href="@{/registrati}">Iscriviti</a>
+</div>
+	</header>
+
+<!DOCTYPE html>
+<html>
+<head th:replace="fragments/base.html :: headerfiles(title=#{pageTitle.name})">
+<title>Japanese Catering Homepage</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<style>
+body {font-family: "Times New Roman", Georgia, Serif;}
+</style>
+</head>
+<body>
+<header th:replace="fragments/base.html :: menu"></header>
+
+<div class="card-deck">
+<div th:each="incontro : ${listaTopIncontri}"> 
+  <div class="card">
+    <img src="${incontro.immagine}" class="card-img-top" alt="immagine incontro">
+    <div class="card-body">
+      <h5 class="card-title" th:text="${incontro.nome}">Nome Incontro</h5>
+      <p class="card-text" th:text="${incontro.nome}">Descrizione dell'incontro'</p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted" th:text="${incontro.libro.titolo}">Libro</small>
+      <small class="text-muted" th:text="${incontro.data}">Data</small>
+      <small class="text-muted" th:text="${incontro.ora}">Ora</small>
+    </div>
+  </div>
+</div>
+
+<footer th:replace="fragments/base.html :: footer"></footer>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/base.html :: headerfiles(title=#{pageTitle.nome})"> </head>
+<body>
+	<header th:replace="fragments/base.html :: menu"></header>
+	<div>
+    	<h4>Congratulazioni!</h4>
+		<h1>La registrazione è andata a buon fine.</h1>
+	
+	<form th:action="@{/login}" method="POST">
+                  <div>
+                    <p class="mb-0 me-2">Adesso puoi effettuare il login!</p>
+                    <button type="submit">login</button>
+                  </div>
+                  </form>
+	
+	</div>
+    <footer th:replace="fragments/base.html :: footer" ></footer>
+</body>
+</html>

@@ -1,0 +1,124 @@
+
+
+body {
+	background-color: peachpuff;  
+	
+}
+.menu, .menuAdmin, .menuUser{
+  overflow: hidden;
+  background-color: #333;
+  position: fixed; 
+  top: 0;
+  width: 100%;
+}
+
+.menu a, .menuAdmin a, .menuUser a {
+  float: left;
+  display: block;
+  color: peachpuff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  box-shadow: inset 0 0 0 0 peachpuff;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+.menu a:hover, .menuAdmin a:hover, .menuUser a:hover {
+  background: peachpuff;
+  color: black;
+  box-shadow: inset 100px 0 0 0 0 peachpuff;
+}
+
+.Footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 5%;
+  width: 100%;
+  background-color:#333;
+  color: peachpuff;
+  padding: 14px 16px;
+  padding-top:14px 16px;
+}
+
+.Footer a {
+  padding: 14px 16px;
+  padding-top:14px 16px;
+  text-align: left;
+}
+
+.Footer span {
+  padding: 14px 16px;
+  padding-top:14px 16px;
+  text-align: center;
+}
+
+.corniceHome {
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	display: flex;
+	flex-direction: row;
+	justify-content:center;
+	padding-top: 3%;
+}
+
+.immagineHome {
+	border-radius: 25px 25px 25px 25px;
+	border-top: 25px;
+	padding-top: 5%;
+	display:block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+}
+
+.elenco, .scheda, .myform {
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	display: flex;
+	flex-direction: row;
+	justify-content:center;
+	padding-top: 3%;
+}
+
+.elencoText, .schedaText, .formText {
+	padding-right: 5%;
+}
+
+.titoloElenco, .titoloScheda, .titoloForm {
+	text-align: center;
+	padding-bottom: 5%;
+}
+
+.corpoElenco, .corpoScheda, .corpoForm{
+	text-align: left;
+}
+
+.elenco a, .scheda a, .myform a{
+  box-shadow: inset 0 0 0 0 #333;
+  color: #333;
+  margin: 0 -.25rem;
+  padding: 0 .25rem;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+.elenco a:hover, .elenco a:hover, .myform a:hover{
+  box-shadow: inset 100px 0 0 0 #333;
+  color:peachpuff;
+}
+
+.deleteButton {
+	background-color: brown;
+	color: white;
+}
+
+.newButton {
+	background-color: green;
+}
+
+.addButton {
+	background-color:aqua;
+}
+
+.removeButton {
+	background-color:yellow;
+}
+ 
+ 

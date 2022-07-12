@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/base.html :: headerfiles(title=#{pageTitle.nome})">
+<meta charset="UTF-8">
+<link rel="stylesheet" href="/css/my-style.css">
+<style>
+body {font-family: "Times New Roman", Georgia, Serif;}
+</style>
+</head>
+
+<body>
+
+<header th:replace="fragments/base.html :: menu"></header>
+
+    <div class="myform" id="formRegistrationAdmin">
+    <div class="formText">
+      <h1 class="titoloForm">Iscriviti!</h1>
+     <div class=corpoForm>
+      <form th:action="@{/register}" method="POST">	
+		<div>
+			<div>
+				<span>Username:</span>
+				<span><input type="text" placeholder="username" required
+                       th:field="${credentials.username}"/></span>
+				<span th:if="${#fields.hasErrors('credentials.username')}"
+                th:errors="${credentials.username}" th:style="'color:red'"></span>
+			</div>		
+			<div>
+				<span>Password:</span>
+				<span><input type="password" placeholder="password" required
+                       th:field="${credentials.password}"/></span>
+				<span th:if="${#fields.hasErrors('credentials.password')}"
+                th:errors="${credentials.password}" th:style="'color:red'"></span>
+			</div>
+			<div>
+				<span>Nome:</span>
+				<span><input type="text" placeholder="nome" required
+                       th:field="${user.nome}"/></span>
+				<span th:if="${#fields.hasErrors('user.nome')}"
+                th:errors="${user.nome}" th:style="'color:red'"></span>
+			</div>
+			<div>
+				<span>Cognome:</span>
+				<span><input type="text" placeholder="cognome" required
+                       th:field="${user.cognome}"/></span>
+				<span th:if="${#fields.hasErrors('user.cognome')}"
+                th:errors="${user.cognome}" th:style="'color:red'"></span>
+			</div>
+			<div>
+				<span>Presentazione:</span>
+				<span><input type="text" placeholder="presentazione" required
+                       th:field="${user.presentazione}"/></span>
+				<span th:if="${#fields.hasErrors('user.presentazione')}"
+                th:errors="${user.presentazione}" th:style="'color:red'"></span>
+			</div>
+			<div>
+				<span><button class"newButton" type="submit">Registra</button></span>
+			</div>
+		</div>
+	</form>
+    </div>
+    </div>
+    <div class="immagineBuffet">
+      <img src="/iNostribuffet.jpg" class="img" height="90%">
+    </div>
+  </div>
+    <footer th:replace="fragments/base.html :: footer"></footer>
+</body>
+</html>
+
+
+
+

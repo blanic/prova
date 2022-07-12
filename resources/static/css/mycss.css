@@ -1,0 +1,141 @@
+
+
+    
+/****************************************NAVBAR**************************************/
+
+/*
+#neubar {
+  background: #fae8d2;
+  box-shadow: 4px 6px 12px rgba(0,0,0,0.4);
+}
+
+.nav-item .active {
+  border-radius: 6px;
+  background-color: linear-gradient(145deg, #ffe7ca, #f5d7b2);
+  box-shadow:  4px 4px 8px #ddc1a0,
+               -4px -4px 8px #f7e5cc;
+}
+#neubar .dropdown-menu a:hover {
+  color: #454545
+}
+#neubar .nav-item {
+  margin : auto 4px;
+}
+#neubar a {
+
+  padding-left:12px;
+  padding-right:12px;
+}
+#neubar .dropdown-menu {
+  background : #545454
+}
+a.navbar-brand {
+  color: #454545
+}
+
+.cream {
+	background-color:  #fae8d2;
+}
+
+*/
+/****************************************BODY**************************************/
+
+/*body {
+	background-color: #ABCDEF;
+}
+*/
+
+/****************************************LOGIN FORM**************************************/
+/*.gradient-custom-2 {
+background: #fccb90;
+
+
+background: -webkit-linear-gradient(to right, 90deg, #faf0cd, #fab397);
+
+
+background: linear-gradient(to right, 90deg, #faf0cd, #fab397);
+}
+
+@media (min-width: 768px) {
+.gradient-form {
+height: 100vh !important;
+}
+}
+@media (min-width: 769px) {
+.gradient-custom-2 {
+border-top-right-radius: .3rem;
+border-bottom-right-radius: .3rem;
+}
+}
+*/
+/****************************************REGISTRATION FORM**************************************/
+
+/*@media (min-width: 1025px) {
+.h-custom {
+height: 100vh !important;
+}
+}
+
+*/
+/****************************************SUCCESSFUL EVENT**************************************/
+
+/*
+      body {
+        text-align: center;
+        background: #EBF0F5;
+      }
+        #successful h1 {
+          color: #88B04B;
+          font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+          font-weight: 900;
+          font-size: 40px;
+          margin-bottom: 10px;
+        }
+        #successful p {
+          color: #404F5E;
+          font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+          font-size:20px;
+          margin: 0;
+        }
+        
+     #successful i {
+        color: #9ABC66;
+        font-size: 100px;
+        line-height: 200px;
+        margin-left:-15px;
+      }
+      
+      #successful {
+        background: white;
+        padding: 60px;
+        border-radius: 4px;
+        box-shadow: 0 2px 3px #C8D0D8;
+        display: inline-block;
+        margin: 0 auto;
+       
+      }
+      
+      */
+/****************************************GENERIC FORM**************************************/
+
+/*.gradient-custom {
+background: #f093fb;
+
+background: -webkit-linear-gradient(to bottom right, rgba(240, 147, 251, 1), rgba(245, 87, 108, 1));
+
+background: linear-gradient(to bottom right, rgba(240, 147, 251, 1), rgba(245, 87, 108, 1))
+}
+
+.card-registration .select-input.form-control[readonly]:not([disabled]) {
+font-size: 1rem;
+line-height: 2.15;
+padding-left: .75em;
+padding-right: .75em;
+}
+.card-registration .select-arrow {
+top: 13px;
+}
+
+*/
+
+  
